@@ -134,6 +134,10 @@ This directly parallels IEP implementation: individualized criteria, independent
 - **Sequential dispatch** = goals that depend on prior progress
 - **Scaffold removal** = coordinators carry structural knowledge so atomics stay simple and independently testable
 
+**The toolkit pattern.** This architecture is replicable across any domain. The steps: (1) identify a compound evaluation or task the model flattens, (2) decompose it into single-objective skills with testable criteria, (3) build a coordinator that dispatches them independently and synthesizes the results. The practitioner resolves disagreements between skills — the model never does. This produces a system where every judgment is traceable to a specific lens with specific criteria, rather than a single compound prompt producing untraceable conclusions.
+
+**Skills vs. agents.** The current industry focus on agentic development — autonomous systems that plan, decide, and execute — inverts the accommodation relationship. An agent asks the model to be the teacher: to set its own goals, manage its own attention, and evaluate its own progress. Skills ask the practitioner to be the teacher: decompose the goals, manage the attention, and evaluate the output. The accommodation model produces more reliable results because it works with the model's processing strengths (focused single-objective execution) rather than against its weaknesses (self-directed multi-objective planning).
+
 ### 4.4 Voice Accommodation: Governance Pipeline
 
 **The processing constraint:** LLMs generate text based on training data dominated by published writing — polished, performative, audience-aware. When asked to write in a specific person's voice, the model produces a generic "professional" register that sounds like competent content marketing.
