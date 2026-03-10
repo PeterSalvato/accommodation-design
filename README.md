@@ -208,8 +208,8 @@ Nobody else is asking that question. The field needs practitioners who know how 
 The following open-source tools were built using this framework:
 
 - **[Savepoint Syntax](https://github.com/PeterSalvato/Savepoint.Protocol)** — Context preservation markup (v3.1)
-- **[Formwork](https://petersalvato.com/governance/formwork-protocol/)** — The accommodation design process
-- **[Skill Architecture](https://petersalvato.com/essays/the-iep-for-ai-systems/)** — Task decomposition as IEP design
+- **[Formwork Protocol](https://petersalvato.com/governance/formwork-protocol/)** — The accommodation design process
+- **[Formwork Skills Architecture](https://github.com/PeterSalvato/formwork)** — Task decomposition as IEP design (lenses, diagnostics, coordinators)
 
 The production site [petersalvato.com](https://petersalvato.com) was compiled using these tools.
 
@@ -229,7 +229,7 @@ The production site [petersalvato.com](https://petersalvato.com) was compiled us
 - Frontiers in AI (2024). "Large Language Models for Whole-Learner Support: Opportunities and Challenges."
 - LogRocket (2025). "Prompt Engineering Best Practices."
 - Salvato, P. (2025). Savepoint Syntax v3.1. Open source. https://github.com/PeterSalvato/Savepoint.Protocol
-- Salvato, P. (2026). Formwork. https://petersalvato.com/governance/formwork-protocol/
+- Salvato, P. (2026). Formwork Protocol. https://petersalvato.com/governance/formwork-protocol/
 - Salvato, P. (2026). "The IEP for AI Systems." https://petersalvato.com/essays/the-iep-for-ai-systems/
 
 ---
