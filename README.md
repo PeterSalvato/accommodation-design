@@ -1,6 +1,8 @@
 # AI Governance as Accommodation Design
 ### A Pedagogical Framework for Human-AI System Architecture
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18941231.svg)](https://doi.org/10.5281/zenodo.18941231)
+
 **Peter Salvato**
 Design Engineer | petersalvato.com
 March 2026
