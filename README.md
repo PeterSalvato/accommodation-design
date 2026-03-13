@@ -11,7 +11,7 @@ March 2026
 
 ## Abstract
 
-Current approaches to AI governance focus on constraining model behavior: safety guardrails, compliance frameworks, output filtering, prompt engineering as control mechanism. This paper proposes an alternative framework derived from special education pedagogy: accommodation design. Rather than asking how to constrain a model, accommodation design asks what the model's processing reality requires to produce quality output. The framework treats prompt architecture as individualized education planning, task decomposition as cognitive accommodation, and evaluation systems as differentiated assessment. The applied process, FormWork, is a coordination harness (named from concrete construction) that holds six accommodation tools in position while work is being produced: a context preservation syntax (SavePoint), a decomposed evaluation system (LensArray), a single-objective skill architecture, a voice governance pipeline, a knowledge traversal system, and an input inversion methodology. All six are deployed on a production site compiled by the system it describes. A literature review confirms that this specific framing does not exist in current research.
+Current approaches to AI governance focus on constraining model behavior: safety guardrails, compliance frameworks, output filtering, prompt engineering as control mechanism. This paper proposes an alternative framework derived from special education pedagogy: accommodation design. Rather than asking how to constrain a model, accommodation design asks what both systems in the room actually need. The model has processing constraints. So does the human. The framework treats prompt architecture as individualized education planning, task decomposition as cognitive accommodation, and evaluation systems as differentiated assessment. The applied process, FormWork, is a coordination harness (named from concrete construction) that holds six accommodation tools in position while work is being produced: a context preservation syntax (SavePoint), a decomposed evaluation system (LensArray), a single-objective skill architecture, a voice governance pipeline, a knowledge traversal system, and an input inversion methodology. All six are deployed on a production site compiled by the system it describes. A literature review confirms that this specific framing does not exist in current research.
 
 ---
 
@@ -23,9 +23,9 @@ Safety guardrails prevent harmful outputs. Compliance frameworks define acceptab
 
 When output quality degrades, the response is more constraint. Longer system prompts. More detailed instructions. Tighter formatting. The prompts grow. The output keeps degrading. The practitioners conclude the model isn't capable enough and wait for the next version.
 
-There is a different question: what does the model actually need to do this job well?
+There is a different question: what does each system in the room actually need to do this job well?
 
-That question changes everything. The practitioner's orientation shifts from adversarial (how do I make it do what I want?) to accommodating (how do I design the task so it can succeed?). Different architecture follows. Different evaluation systems. Different results.
+That question changes everything. The practitioner's orientation shifts from adversarial (how do I make it do what I want?) to accommodating (how do I design the task so it can succeed?). And the question applies in both directions. The model has processing constraints that need designing around. The human has processing constraints too: ideas lose fidelity when forced into structure at the point of capture. Accommodate both and the architecture changes. The evaluation systems change. The results change.
 
 I learned to ask that question in a special education classroom in Brooklyn.
 
@@ -63,7 +63,7 @@ Same structural accommodation, different system.
 
 ## 3. The Framework: Accommodation Design
 
-Accommodation design starts with one question: what is the processing reality of the system receiving this task?
+Accommodation design starts with one question: what is the processing reality of each system involved in this task?
 
 For a student: working memory capacity, attention profile, sensory processing, prior knowledge, emotional state. The IEP documents this and prescribes accommodations.
 
@@ -81,7 +81,7 @@ The mapping is direct:
 | Checkpoint pacing | Savepoint systems | Working memory has limits; mark progress before coherence degrades |
 | Accommodation removal | Scaffold reduction | Build capability, not dependency |
 
-The central claim: AI systems have specific processing realities that can be accommodated. The quality of the output depends on how well the task design meets those processing needs.
+The central claim: both systems in the room have processing realities that can be accommodated. The model needs structured input, decomposed tasks, and independent evaluation. The human needs friction removed at the point of capture, so that raw thinking enters the system without losing fidelity to structure. The pour accommodates the human. The tools accommodate the model. The quality of the output depends on how well the task design meets both sets of processing needs.
 
 ---
 
@@ -93,9 +93,9 @@ The name comes from concrete construction. You build formwork before you pour. T
 
 FormWork is that temporary structure around a project. It is not any single tool. It is the harness that holds all the tools in position while the work is wet. The tools do their jobs. The harness coordinates them. When the work is done, the formwork comes off. The work stands.
 
-The pour is unstructured human thinking: brainstorming, voice notes, arguing with myself, changing direction mid-sentence. Three years of that produced the corpus everything else operates on. The tools shape it. FormWork holds the tools. Out comes the work.
+The pour is deliberately generating source material in your own voice. Brainstorming, voice notes, arguing with myself, changing direction mid-sentence. It can accumulate over years, get extracted in a single interview session, or arrive as a dictation from the car. The pour isn't a one-time step at the start. It's available throughout the process: a new facet emerges, you spin up an interview and fill it. The corpus grows as the project grows. This is required because without it, the tools have nothing real to work from. The voice pipeline can't preserve a voice that isn't in the source material. Knowledge traversal can't trace thinking that was never captured. The source material is conversational because the model's training data is dominated by polished published writing. Conversational material gives the tools something that actually sounds like the maker, not the model's average. The pour also carries the real structure of the thinking: how ideas connect, where they backtrack, what sequences naturally. The nature of what goes in determines the shape of what comes out. The tools shape it. FormWork holds the tools. Out comes the work.
 
-Six tools, each built from the same question applied to a different processing constraint. All of them depend on one foundational practice: the accumulation of raw, unstructured human thinking as the substrate the tools operate on.
+Six tools, each built from the same question applied to a different processing constraint. All of them depend on one foundational practice: the deliberate generation of source material that carries the maker's voice and the actual structure of their thinking.
 
 ### 4.1 Context Preservation: SavePoint Syntax
 
@@ -111,7 +111,7 @@ The design principle: build the syntax for what the model needs to reconstruct c
 
 ### 4.2 Evaluation Decomposition: LensArray
 
-"Is this good?" is twelve questions disguised as one. Give a model that compound evaluation and the criteria bleed together. Structural assessment contaminates narrative assessment. You get a blended average, not independent verdicts.
+A single evaluation prompt asking a model to assess voice, structure, narrative, and brand simultaneously produces a blended average. The criteria bleed together. Structural assessment contaminates narrative assessment. You get mush, not independent verdicts.
 
 I built [LensArray](https://petersalvato.com/systems/lensarray/): a decomposed evaluation system. Work gets evaluated across distinct layers of concern (structural, narrative), each staffed with lenses extracted from real practitioners' bodies of work. Vignelli for restraint. Bierut for problem-solving. Millman for authenticity. Each lens runs independently with its own criteria and its own definition of success. A coordinator collects verdicts and maps where they agree (act on it) and where they disagree (the practitioner decides).
 
@@ -131,13 +131,13 @@ The current industry focus on agentic development inverts this relationship. An 
 
 ### 4.4 Voice Governance
 
-LLMs generate text from training data dominated by published writing: polished, performative, audience-aware. Ask the model to write in a specific person's voice and it produces competent content marketing that sounds like everyone and no one.
+LLMs generate text from training data dominated by published writing: polished, performative, audience-aware. Ask the model to write in a specific person's voice and the output is fluent, correct, and indistinguishable from every other fluent, correct AI draft.
 
 I built a voice pipeline that samples from conversation transcripts (1,643 ChatGPT sessions, 700+ Claude sessions, Gemini exports) instead of published writing. Rough, unstructured, full of false starts. That's how I actually talk. The pipeline extracts patterns (sentence rhythm, how I start explaining something, vocabulary I reach for, what I never say) and encodes them as constraints on all written output.
 
 Published writing is performance. Conversation is how someone actually communicates. Sampling from conversation instead of publication gives the model source material that matches the target register.
 
-A blind evaluation by a third-party AI assessment tool rated the output "unequivocally human-written."
+A blind third-party assessment could not distinguish the output from direct human writing.
 
 ### 4.5 Knowledge Traversal
 
@@ -185,7 +185,7 @@ Two established research lanes exist:
 
 2. **AI performing empathy.** Training LLMs to exhibit empathetic responses in therapeutic and educational contexts: mental health chatbots, empathic prompting frameworks, affective computing. The empathy is a simulated output characteristic, not a design input (ScienceDirect, 2025; JMIR Mental Health, 2025; MDPI, 2025).
 
-The gap: nobody is applying accommodation to the AI system itself. Nobody is treating the model's processing constraints as a learner profile to be accommodated. The closest adjacent work is research on adaptive scaffolding for LLM-based pedagogical agents (arXiv, 2025), which applies scaffolding theory to how AI agents support human learners, not to how practitioners should design tasks for the AI's own processing needs.
+The gap: nobody is applying accommodation bidirectionally. Nobody is treating both the model's processing constraints and the human's cognitive constraints as profiles to be accommodated simultaneously. The closest adjacent work is research on adaptive scaffolding for LLM-based pedagogical agents (arXiv, 2025), which applies scaffolding theory to how AI agents support human learners, not to how practitioners should design tasks for both systems' processing needs.
 
 The AI governance field is populated primarily by computer scientists (who approach the model as a system to optimize) and policy professionals (who approach the model as a risk to manage). Neither discipline trains practitioners in accommodation. Special education does.
 
@@ -193,15 +193,15 @@ The AI governance field is populated primarily by computer scientists (who appro
 
 ## 7. Implications
 
-If AI systems are treated as systems with processing realities to accommodate, several things follow:
+If both systems are treated as having processing realities to accommodate, several things follow:
 
-**Prompt architecture becomes accommodation design.** The first question shifts from "what output do I want?" to "what does this system need to produce that output?" Every decision changes: instruction structure, task granularity, evaluation design, session management.
+**Prompt architecture becomes accommodation design.** The first question shifts from "what output do I want?" to "what does each system need to do this job well?" The model needs decomposed tasks. The human needs friction removed. Every decision changes: instruction structure, task granularity, evaluation design, session management, and how raw thinking enters the system.
 
-**Federal education law already codifies the design pattern.** Individualized specification of goals, success criteria, required accommodations, and progress monitoring. The CLAUDE.md file (persistent system context) is functionally an IEP: what the system needs to know, how it should approach tasks, what constitutes success.
+Federal education law already codifies the design pattern. IDEA mandates individualized specification of goals, success criteria, required accommodations, and progress monitoring. The CLAUDE.md file (persistent system context) is functionally an IEP: what the system needs to know, how it should approach tasks, what constitutes success.
 
-**Task decomposition is accommodation, not optimization.** Current practice treats decomposition as an engineering technique. The accommodation framing shows that decomposition is necessary because the system cannot process compound tasks. Same reason it's necessary in the classroom. The system needs it to do the work.
+Why does the industry treat task decomposition as an optimization technique? The accommodation framing shows that decomposition is necessary because the system cannot process compound tasks. Same reason it's necessary in the classroom. The system needs it to do the work.
 
-**Every scaffold should be questioned.** Current AI tool development trends toward increasingly complex system prompts, longer context documents, more elaborate orchestration. The accommodation framework asks: which of these scaffolds is building capability, and which is building dependency?
+Current AI tool development trends toward increasingly complex system prompts, longer context documents, more elaborate orchestration. The accommodation framework asks a question about every one of them: which scaffolds are building capability, and which are building dependency?
 
 **The practitioner profile changes.** If AI governance requires accommodation design, the field needs practitioners trained in reading processing realities and designing for them. That skill set lives in special education, instructional design, and certain branches of design practice. The insight that AI systems need accommodation could not have originated within computer science because computer science does not teach accommodation.
 
@@ -211,9 +211,9 @@ If AI systems are treated as systems with processing realities to accommodate, s
 
 The AI governance field is building constraint systems for a problem that requires accommodation systems. Constraining a system fights its limitations. Accommodating a system designs for them.
 
-This framework was developed through direct transfer from special education pedagogy to AI system architecture, supported by twenty-five years of applied practice across construction, print production, enterprise software, brand systems, and design education. Six applied solutions (context preservation, evaluation decomposition, task decomposition, voice accommodation, retrieval accommodation, input inversion) each came from the same question: what does this system actually need to do this job well?
+This framework was developed through direct transfer from special education pedagogy to AI system architecture, supported by twenty-five years of applied practice across construction, print production, enterprise software, brand systems, and design education. The applied process, FormWork, accommodates both systems in the room. The pour is the first accommodation, aimed at the human: remove friction at the point of capture so the raw material carries the maker's actual voice and the real structure of their ideas. Five tools provide the second accommodation, aimed at the model: context preservation, evaluation decomposition, task decomposition, voice governance, and retrieval accommodation. Each came from the same question applied to a different processing constraint: what does this system actually need to do this job well?
 
-Nobody else is asking that question. The field needs practitioners who know how to ask it.
+Nobody else is asking that question about both systems simultaneously. The field needs practitioners who know how to ask it.
 
 ---
 
