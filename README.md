@@ -103,7 +103,7 @@ I kept losing my thinking between sessions. Not the notes. The exact moment some
 
 I built Savepoint Syntax: a self-closing tag you drop inline at the moment of a cognitive turning point. Machine-readable, human-writable. One line of content, forced precision.
 
-The first version (v1.0, YAML frontmatter) was too open-ended. The format encouraged journaling. The concrete content drifted. The protocol reproduced the exact loss it was built to prevent. Version 2.0 (triple-pipe attributes) was too verbose. Version 3.0 (self-closing tag) constrained the content to one line. Version 3.1 added project scoping when the archive exceeded 60,000 documents.
+The first version (v1.0, YAML frontmatter) was too open-ended. The format encouraged journaling. The concrete content drifted. The protocol reproduced the exact loss it was built to prevent. Version 2.0 (triple-pipe attributes) was too verbose. Version 3.0 (self-closing tag) constrained the content to one line. Version 3.1 added project scoping when the archive exceeded 6,000 conversations containing over 300,000 messages.
 
 The design principle: build the syntax for what the model needs to reconstruct context (structured, atomic, searchable markers), not for what I need to remember (narrative, reflective notes). That distinction is the accommodation move.
 
@@ -257,4 +257,4 @@ You are free to share and adapt this material for any purpose, including commerc
 
 ---
 
-*Peter Salvato is a design engineer based in Fort Lauderdale, FL. He studied Visual Communication at the School of Visual Arts, taught special education in Brooklyn, NY, and spent twelve years building the front end of an enterprise recruiting platform. His AI governance work applies twenty-five years of practice across construction, print production, pedagogy, enterprise software, and brand systems to the question of what AI systems actually need to produce quality output. His work is published at [petersalvato.com](https://petersalvato.com).*
+*Peter Salvato is a design engineer based in Fort Lauderdale, FL. He studied Visual Communication at the School of Visual Arts, taught special education in Brooklyn, NY, and spent thirteen years building the front end of an enterprise recruiting platform. His AI governance work applies twenty-five years of practice across construction, print production, pedagogy, enterprise software, and brand systems to the question of what AI systems actually need to produce quality output. His work is published at [petersalvato.com](https://petersalvato.com).*
