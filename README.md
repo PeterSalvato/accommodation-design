@@ -1,10 +1,12 @@
 # AI Governance as Accommodation Design
 ### A Pedagogical Framework for Human-AI System Architecture
 
+This started in a special education classroom in Brooklyn, where I ran twelve individualized learning plans at once and learned to design tasks for how each student actually processed information. Three years ago I recognized the same constraints in AI tools and started building around them. This paper is where I formalize it. The applied process is [FormWork](https://petersalvato.com/systems/formwork/).
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18941231.svg)](https://doi.org/10.5281/zenodo.18941231)
 
 **Peter Salvato**
-Design Engineer | [petersalvato.com](https://petersalvato.com)
+Design Engineer | [petersalvato.com](https://petersalvato.com/)
 March 2026
 
 ---
@@ -25,7 +27,7 @@ When output quality degrades, the response is more constraint. Longer system pro
 
 There is a different question: what does each system in the room actually need to do this job well?
 
-That question changes everything. The practitioner's orientation shifts from adversarial (how do I make it do what I want?) to accommodating (how do I design the task so it can succeed?). And the question applies in both directions. The model has processing constraints that need designing around. The human has processing constraints too: ideas lose fidelity when forced into structure at the point of capture. Accommodate both and the architecture changes. The evaluation systems change. The results change.
+That question changes everything. The practitioner's orientation shifts from adversarial (how do I make it do what I want?) to accommodating (how do I design the task so it can succeed?). And the question applies in both directions. The model has processing constraints that need designing around. The human has processing constraints too: ideas lose fidelity when forced into structure at the point of capture. Accommodate both and everything downstream shifts: the architecture, the evaluation systems, the results.
 
 I learned to ask that question in a special education classroom in Brooklyn.
 
@@ -57,7 +59,7 @@ I gave it a prompt: evaluate this portfolio for voice quality, structural integr
 
 I recognized it immediately. A compound instruction given to a system that can't process it whole. I'd seen this every day in the classroom. The fix is the same fix. Decompose. One dimension per prompt. One clear objective. One clear output. Run them independently.
 
-Same structural accommodation, different system.
+The fix carried straight across from the classroom to the model.
 
 ---
 
@@ -81,7 +83,7 @@ The mapping is direct:
 | Checkpoint pacing | Savepoint systems | Working memory has limits; mark progress before coherence degrades |
 | Accommodation removal | Scaffold reduction | Build capability, not dependency |
 
-The central claim: both systems in the room have processing realities that can be accommodated. The model needs structured input, decomposed tasks, and independent evaluation. The human needs friction removed at the point of capture, so that raw thinking enters the system without losing fidelity to structure. The pour accommodates the human. The tools accommodate the model. The quality of the output depends on how well the task design meets both sets of processing needs.
+The central claim: both systems in the room have processing realities that can be accommodated. Removing friction at the point of capture accommodates the human, so raw thinking enters the system without losing fidelity to structure. Decomposing tasks and structuring evaluation accommodates the model's processing constraints. The quality of the output depends on how well the task design meets both sets of processing needs.
 
 ---
 
@@ -89,13 +91,13 @@ The central claim: both systems in the room have processing realities that can b
 
 I've applied this framework across three years of continuous development (2023-2026), building a set of tools I call FormWork.
 
-The name comes from concrete construction. You build formwork before you pour. The temporary structure shapes the work while things are fluid: it holds the boards in position, keeps the pour contained, gives the wet material somewhere to go. Once the concrete sets, the form comes off. The shape holds on its own.
+The name comes from concrete construction. You build formwork before you pour. The temporary structure shapes the work while things are fluid: it holds the boards in position, keeps the material contained, gives it somewhere to go. Once the concrete sets, the form comes off. The shape holds on its own.
 
-FormWork is that temporary structure around a project. It is not any single tool. It is the harness that holds all the tools in position while the work is wet. The tools do their jobs. The harness coordinates them. When the work is done, the formwork comes off. The work stands.
+FormWork is that temporary structure around a project. It is not any single tool. It is the harness that holds all the tools in position while the work is wet. The tools do their jobs. The harness coordinates them. When the work is done, the formwork comes off and the structure holds on its own.
 
-The pour is deliberately generating source material in your own voice. Brainstorming, voice notes, arguing with myself, changing direction mid-sentence. It can accumulate over years, get extracted in a single interview session, or arrive as a dictation from the car. The pour isn't a one-time step at the start. It's available throughout the process: a new facet emerges, you spin up an interview and fill it. The corpus grows as the project grows. This is required because without it, the tools have nothing real to work from. The voice pipeline can't preserve a voice that isn't in the source material. Knowledge traversal can't trace thinking that was never captured. The source material is conversational because the model's training data is dominated by polished published writing. Conversational material gives the tools something that actually sounds like the maker, not the model's average. The pour also carries the real structure of the thinking: how ideas connect, where they backtrack, what sequences naturally. The nature of what goes in determines the shape of what comes out. The tools shape it. FormWork holds the tools. Out comes the work.
+You start by dumping your thinking. Brainstorming, voice notes, arguing with myself, changing direction mid-sentence. Dumps become source material. They can accumulate over years, get extracted in a single interview session, or arrive as a dictation from the car. A new facet emerges mid-project, you spin up an interview and fill it. The corpus grows as the project grows. Without that raw material, the tools have nothing real to work from. The voice pipeline can't preserve a voice that isn't in the source material. Knowledge traversal can't trace thinking that was never captured. The source material is conversational because the model's training data is dominated by polished published writing. Conversational material gives the tools something that actually sounds like the maker, not the model's average. It also carries the real structure of the thinking: how ideas connect, where they backtrack, what sequences naturally. The nature of what goes in determines the shape of what comes out. The tools shape it. FormWork holds the tools.
 
-Six tools, each built from the same question applied to a different processing constraint. All of them depend on one foundational practice: the deliberate generation of source material that carries the maker's voice and the actual structure of their thinking.
+Six tools, each built from the same question applied to a different processing constraint. All of them depend on the dump: unstructured thinking that carries the maker's voice and the actual structure of their ideas.
 
 ### 4.1 Context Preservation: SavePoint Syntax
 
@@ -103,11 +105,11 @@ I kept losing my thinking between sessions. Not the notes. The exact moment some
 
 I built Savepoint Syntax: a self-closing tag you drop inline at the moment of a cognitive turning point. Machine-readable, human-writable. One line of content, forced precision.
 
-The first version (v1.0, YAML frontmatter) was too open-ended. The format encouraged journaling. The concrete content drifted. The protocol reproduced the exact loss it was built to prevent. Version 2.0 (triple-pipe attributes) was too verbose. Version 3.0 (self-closing tag) constrained the content to one line. Version 3.1 added project scoping when the archive exceeded 6,000 conversations containing over 300,000 messages.
+The first version (v1.0, YAML frontmatter) was too open-ended. The format encouraged journaling. The concrete content drifted. The protocol reproduced the exact loss it was built to prevent. Version 2.0 (triple-pipe attributes) was too verbose. Version 3.0 (self-closing tag) constrained the content to one line. Version 3.1 added project scoping when the archive exceeded 6,000 conversations. Version 3.2 added a `context:` field: one sentence of reconstruction payload, so a savepoint carries enough meaning to stand alone without the surrounding conversation. That addition came from real traversal work, searching months of logs where savepoints got me to the right neighborhood but couldn't reconstruct what was decided.
 
 The design principle: build the syntax for what the model needs to reconstruct context (structured, atomic, searchable markers), not for what I need to remember (narrative, reflective notes). That distinction is the accommodation move.
 
-**Open source:** [Savepoint Syntax v3.1](https://github.com/PeterSalvato/Savepoint.Protocol)
+**Open source:** [Savepoint Syntax v3.2](https://github.com/PeterSalvato/Savepoint.Protocol)
 
 ### 4.2 Evaluation Decomposition: LensArray
 
@@ -127,17 +129,17 @@ The IEP parallel: atomic skills are individual goals (one measurable objective p
 
 This is replicable across any domain. Identify a compound task the model flattens. Decompose it into single-objective skills with testable criteria. Build a coordinator that dispatches them and synthesizes results. The practitioner resolves disagreements. The model never does.
 
-The current industry focus on agentic development inverts this relationship. An agent asks the model to set its own goals, manage its own attention, evaluate its own progress. Skills ask the practitioner to do that work. The accommodation approach produces more reliable results because it works with the model's processing strengths (focused single-objective execution) instead of against its weaknesses (self-directed multi-objective planning).
+The current industry focus on agentic development inverts this relationship. An agent hands the model the whole job: figure out what to do, decide what to focus on, judge whether it worked. Skills ask the practitioner to do that work. The accommodation approach produces more reliable results because it works with the model's processing strengths (focused single-objective execution) instead of against its weaknesses (self-directed multi-objective planning).
 
 ### 4.4 Voice Governance
 
 LLMs generate text from training data dominated by published writing: polished, performative, audience-aware. Ask the model to write in a specific person's voice and the output is fluent, correct, and indistinguishable from every other fluent, correct AI draft.
 
-I built a voice pipeline that samples from conversation transcripts (1,643 ChatGPT sessions, 700+ Claude sessions, Gemini exports) instead of published writing. Rough, unstructured, full of false starts. That's how I actually talk. The pipeline extracts patterns (sentence rhythm, how I start explaining something, vocabulary I reach for, what I never say) and encodes them as constraints on all written output.
+I built a voice pipeline that samples from conversation transcripts (1,643 ChatGPT sessions, over 1,400 Claude sessions, and Gemini exports) instead of published writing. Rough, unstructured, full of false starts. That's how I actually talk. The pipeline extracts patterns (sentence rhythm, how I start explaining something, vocabulary I reach for, what I never say) and encodes them as constraints on all written output.
 
-Published writing is performance. Conversation is how someone actually communicates. Sampling from conversation instead of publication gives the model source material that matches the target register.
+Conversation carries how someone actually communicates: the rhythms, the vocabulary, the way they build toward a point. Sampling from conversation instead of publication gives the model source material that matches the target register.
 
-A blind third-party assessment could not distinguish the output from direct human writing.
+The output reads as direct human writing under informal review, though no formal detection study has been conducted.
 
 ### 4.5 Knowledge Traversal
 
@@ -153,7 +155,7 @@ Every tool described above depends on one thing: a corpus of raw, unstructured h
 
 Current best practice says structure your input: specific instructions, defined output formats, few-shot examples, chain-of-thought scaffolds. Industry guidance warns against "dumping unstructured data at an LLM" (LogRocket, 2025). The assumption is that quality output requires structured input.
 
-I went the other way. For three years I treated the AI as a thinking partner that captures raw ideation: brainstorming, arguing with myself, changing direction mid-sentence, working through problems out loud. That produced 1,643 ChatGPT sessions, 700+ Claude sessions, and Gemini exports. Dictated voice notes. Unfinished thoughts. Arguments with no resolution. The corpus is the dataset.
+I went the other way. For three years I treated the AI as a thinking partner that captures raw ideation: brainstorming, arguing with myself, changing direction mid-sentence, working through problems out loud. That produced 1,643 ChatGPT sessions, over 1,400 Claude sessions, and Gemini exports. Dictated voice notes. Unfinished thoughts. Arguments with no resolution. The corpus is the dataset.
 
 This is accommodation design applied in both directions. The AI gets decomposed tasks, one objective at a time, structured for its processing reality. The human gets the opposite: permission to be unstructured. No requirement to organize thoughts before having them. No performance. No formatting. Raw data out of the human mind.
 
@@ -163,21 +165,21 @@ The scale doesn't have to be three years and thousands of sessions. A month of v
 
 The production site petersalvato.com was compiled from this unstructured corpus. Three years of raw thinking, processed by accommodation tools, evaluated by the decomposed lens system, verified against voice patterns extracted from conversation. The quality comes from the depth of the dataset and the accommodation of the processing, not from structuring the input.
 
-The field's emphasis on structured input may itself be a constraint-based approach: pre-structuring to compensate for processing limitations rather than accommodating those limitations with purpose-built tools.
+I think the field's emphasis on structured input may itself be a constraint-based approach: pre-structuring to compensate for processing limitations rather than accommodating them with purpose-built tools.
 
 ---
 
 ## 5. The Recursive Proof
 
-petersalvato.com was compiled using the system described on it. FormWork held the tools in position while the work was wet: LensArray evaluated every page across independent dimensions. The voice pipeline verified every piece of copy against patterns extracted from conversation. The knowledge traversal skill traced concept lineage across three years of conversation history. SavePoint Syntax marked cognitive turning points throughout. The formwork came off. The site stands.
+petersalvato.com was compiled using the system described on it. FormWork held the tools in position while the work was wet: LensArray evaluated every page across independent dimensions. The voice pipeline verified every piece of copy against patterns extracted from conversation. The knowledge traversal skill traced concept lineage across three years of conversation history. SavePoint Syntax marked cognitive turning points throughout. The formwork came off. What's left is a working site you can walk through and assess on its own terms.
 
-The site is an artifact produced by the framework. The accommodation architecture built the thing that explains the accommodation architecture. This recursive proof is the strongest form of evidence available for a design methodology: a deployed system producing visible, assessable results.
+The site is an artifact produced by the framework. The accommodation architecture built the thing that explains it. A deployed system producing visible, assessable results, compiled by the process it describes.
 
 ---
 
 ## 6. Literature Gap
 
-A systematic search of current literature (2024-2026) across OECD publications, Springer, Frontiers in AI, arXiv, Taylor & Francis, JMIR, ScienceDirect, and education technology publications confirms that this framing does not exist in current research.
+A targeted review of current literature (2024-2026) across OECD publications, Springer, Frontiers in AI, arXiv, Taylor & Francis, JMIR, ScienceDirect, and education technology publications confirms that this framing does not exist in current research.
 
 Two established research lanes exist:
 
@@ -195,25 +197,25 @@ The AI governance field is populated primarily by computer scientists (who appro
 
 If both systems are treated as having processing realities to accommodate, several things follow:
 
-**Prompt architecture becomes accommodation design.** The first question shifts from "what output do I want?" to "what does each system need to do this job well?" The model needs decomposed tasks. The human needs friction removed. Every decision changes: instruction structure, task granularity, evaluation design, session management, and how raw thinking enters the system.
+**Prompt architecture becomes accommodation design.** The first question shifts from "what output do I want?" to "what are the processing realities here, and how do I design for them?" The model needs decomposed tasks. The human needs friction removed. Every decision changes: instruction structure, task granularity, evaluation design, session management, and how raw thinking enters the system.
 
 Federal education law already codifies the design pattern. IDEA mandates individualized specification of goals, success criteria, required accommodations, and progress monitoring. The CLAUDE.md file (persistent system context) is functionally an IEP: what the system needs to know, how it should approach tasks, what constitutes success.
 
-Why does the industry treat task decomposition as an optimization technique? The accommodation framing shows that decomposition is necessary because the system cannot process compound tasks. Same reason it's necessary in the classroom. The system needs it to do the work.
+The industry treats task decomposition as an optimization technique. The accommodation framing shows why it's necessary at a more fundamental level: the system cannot process compound tasks, the same way a student with processing delays cannot hold three instructions at once.
 
 Current AI tool development trends toward increasingly complex system prompts, longer context documents, more elaborate orchestration. The accommodation framework asks a question about every one of them: which scaffolds are building capability, and which are building dependency?
 
-**The practitioner profile changes.** If AI governance requires accommodation design, the field needs practitioners trained in reading processing realities and designing for them. That skill set lives in special education, instructional design, and certain branches of design practice. The insight that AI systems need accommodation could not have originated within computer science because computer science does not teach accommodation.
+**The practitioner profile changes.** If AI governance requires accommodation design, the field needs practitioners trained in reading processing realities and designing for them. That skill set lives in special education, instructional design, and certain branches of design practice. This kind of thinking could not have originated within computer science, because computer science does not teach accommodation.
 
 ---
 
 ## 8. Conclusion
 
-The AI governance field is building constraint systems for a problem that requires accommodation systems. Constraining a system fights its limitations. Accommodating a system designs for them.
+The AI governance field is building constraint systems for a problem that requires accommodation systems. The difference matters: constraints assume the model is the problem, accommodation assumes the task design is.
 
-This framework was developed through direct transfer from special education pedagogy to AI system architecture, supported by twenty-five years of applied practice across construction, print production, enterprise software, brand systems, and design education. The applied process, FormWork, accommodates both systems in the room. The pour is the first accommodation, aimed at the human: remove friction at the point of capture so the raw material carries the maker's actual voice and the real structure of their ideas. Five tools provide the second accommodation, aimed at the model: context preservation, evaluation decomposition, task decomposition, voice governance, and retrieval accommodation. Each came from the same question applied to a different processing constraint: what does this system actually need to do this job well?
+This framework was developed through direct transfer from special education pedagogy to AI system architecture, supported by twenty-five years of applied practice across construction, print production, enterprise software, brand systems, and design education. The applied process, FormWork, accommodates both systems in the room. The first accommodation is aimed at the human: remove friction at the point of capture so the raw material carries the maker's actual voice and the real structure of their ideas. Five tools provide the second accommodation, aimed at the model: context preservation, evaluation decomposition, task decomposition, voice governance, and retrieval accommodation. Each came from the same move applied to a different processing constraint: read the processing reality, then design the task around it.
 
-Nobody else is asking that question about both systems simultaneously. The field needs practitioners who know how to ask it.
+Nobody else is asking that question about both systems simultaneously. And the practitioner profile that asks it (trained in reading processing realities and designing for them) does not come from computer science. That training comes from sitting across from a student, figuring out what they actually need, and building the task around that.
 
 ---
 
@@ -222,11 +224,11 @@ Nobody else is asking that question about both systems simultaneously. The field
 The following open-source tools were built using this framework:
 
 - **[FormWork](https://petersalvato.com/systems/formwork/)**: The accommodation design process. The harness that coordinates all tools during a project.
-- **[SavePoint Syntax](https://github.com/PeterSalvato/Savepoint.Protocol)**: Context preservation markup (v3.1)
+- **[SavePoint Syntax](https://github.com/PeterSalvato/Savepoint.Protocol)**: Context preservation markup (v3.2)
 - **[LensArray](https://petersalvato.com/systems/lensarray/)**: Decomposed evaluation with practitioner-extracted lenses
 - **[Skills Architecture](https://github.com/PeterSalvato/formwork)**: Task decomposition as IEP design (single-objective diagnostics, coordinators)
 
-The production site [petersalvato.com](https://petersalvato.com) was compiled using these tools.
+The production site [petersalvato.com](https://petersalvato.com/) was compiled using these tools.
 
 ---
 
@@ -243,7 +245,7 @@ The production site [petersalvato.com](https://petersalvato.com) was compiled us
 - MDPI (2025). "Empathy by Design: Reframing the Empathy Gap Between AI and Humans in Mental Health Chatbots." Information.
 - Frontiers in AI (2024). "Large Language Models for Whole-Learner Support: Opportunities and Challenges."
 - LogRocket (2025). "Prompt Engineering Best Practices."
-- Salvato, P. (2025). Savepoint Syntax v3.1. Open source. [github.com/PeterSalvato/Savepoint.Protocol](https://github.com/PeterSalvato/Savepoint.Protocol)
+- Salvato, P. (2025–2026). Savepoint Syntax v3.2. Open source. [github.com/PeterSalvato/Savepoint.Protocol](https://github.com/PeterSalvato/Savepoint.Protocol)
 - Salvato, P. (2026). FormWork. [petersalvato.com/systems/formwork/](https://petersalvato.com/systems/formwork/)
 - Salvato, P. (2026). "The IEP for AI Systems." [petersalvato.com/essays/the-iep-for-ai-systems/](https://petersalvato.com/essays/the-iep-for-ai-systems/)
 
@@ -257,4 +259,4 @@ You are free to share and adapt this material for any purpose, including commerc
 
 ---
 
-*Peter Salvato is a design engineer based in Fort Lauderdale, FL. He studied Visual Communication at the School of Visual Arts, taught special education in Brooklyn, NY, and spent thirteen years building the front end of an enterprise recruiting platform. His AI governance work applies twenty-five years of practice across construction, print production, pedagogy, enterprise software, and brand systems to the question of what AI systems actually need to produce quality output. His work is published at [petersalvato.com](https://petersalvato.com).*
+*Peter Salvato is a design engineer based in Fort Lauderdale, FL. He studied Visual Communication at the School of Visual Arts, taught special education in Brooklyn, NY, and spent thirteen years building the front end of an enterprise recruiting platform. His AI governance work applies twenty-five years of practice across construction, print production, pedagogy, enterprise software, and brand systems to the question of what AI systems actually need to produce quality output. His work is published at [petersalvato.com](https://petersalvato.com/).*
